@@ -6,8 +6,11 @@ Since music is my only passion out of school, I like spending lots of time on re
 Therefore, I'm motivated to create a content-based recommendation algorithm which captures essense from music critics. Additionally this algorithm can pick similar songs beloning to different genres.
 
 Basically the project consists of three components: 
+
 1. A web scrpaer extracting reviews from Pitchfork.com (Scraping_Ultimate.py)
+
 2. Retrieving contents from last.fm API (lastfm_scrape.py)
+
 3. Applying topic modeling and TF/IDF on review contents (topic_model.py)
 
 The algorithm is evaluated by a couple of music lovers. 
