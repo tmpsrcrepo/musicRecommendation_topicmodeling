@@ -27,6 +27,8 @@ import matplotlib.pyplot as plt
 from nltk.tag.stanford import NERTagger
 import os
 import subprocess
+import sys
+print sys.argv
 from sklearn import svm
 import pylast
 from pyechonest import config
@@ -633,6 +635,7 @@ def CosineVec(v1,v2):
         v2_size += p*p
     
     return cosine/(math.pow(v1_size,0.5)*math.pow(v2_size,0.5))
+    
 #from sklearn.feature_extraction.text import TfidfVectorizer
 #from sklearn.cluster.bicluster import SpectralCoclustering
 #from sklearn.cluster import MiniBatchKMeans
@@ -644,9 +647,13 @@ def CosineVec(v1,v2):
 #X=vectorizer.fit_transform(texts)
 
 #cocluster.fit(X)
-#dictionary = corpora.Dictionary(uni_token)
-#model = ldaGenerate(uni_token,'tmp')
 
 
-#test corpusGenerate - by a list of unigrams, a list of unigrams+bigrams
-#LDA
+if __name__ == '__main__':
+    genre_ = raw_input("Please enter Genre:")
+    title = raw_input("Please enter Track name:")
+    artist_ = raw_input("Please enter Artist name:")
+    k = raw_input("Please enter k value:")
+    All_Wrapper(genre_,title,artist_,k)
+
+
